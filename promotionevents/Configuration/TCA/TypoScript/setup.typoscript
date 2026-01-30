@@ -1,0 +1,8 @@
+plugin.tx_promotionevents_upcoming {
+    view {
+        templateRootPaths. 0 = EXT:promotionevents/Resources/Private/Templates/
+        partialRootPaths.0 = EXT: promotionevents/Resources/Private/Partials/
+        layoutRootPaths.0 = EXT:promotionevents/Resources/Private/Layouts/
+    }
+    
+}

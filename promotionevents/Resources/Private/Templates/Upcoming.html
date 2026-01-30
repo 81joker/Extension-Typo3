@@ -1,0 +1,51 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<h2 class="mb-4">Upcoming Events</h2>
+
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 bg-light p-4 rounded-3">
+    <f:for each="{upcomingEvents}" as="event">
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+
+                <div class="card-body">
+                    <h5 class="card-title">
+                        {event.title}
+                    </h5>
+
+                    <h6 class="card-subtitle mb-2 text-muted">
+                        <i class="bi bi-calendar-event"></i>
+                        <f:format.date format="d.m.Y">{event.promotiondate}</f:format.date>
+                    </h6>
+
+                    <p class="card-text">
+                        <strong>Location:</strong><br>
+                        {event.location}
+                    </p>
+
+                    <f:if condition="{event.description}">
+                        <div class="card-text">
+                            <f:format.crop maxCharacters="120">
+                                <f:format.stripTags>
+                                    {event.description}
+                                </f:format.stripTags>
+                            </f:format.crop>
+                        </div>
+                    </f:if>
+                </div>
+
+                <f:if condition="{event.locationlink}">
+                    <div class="card-footer bg-transparent border-top-0">
+                        <a href="{event.locationlink}" class="btn btn-outline-primary btn-sm" target="_blank">
+                            View location
+                        </a>
+                        <f:link.action action="detail" arguments="{event: event}"
+                            class="btn btn-outline-primary btn-sm">
+                            More details
+                        </f:link.action>
+
+                    </div>
+                </f:if>
+
+            </div>
+        </div>
+    </f:for>
+</div>
