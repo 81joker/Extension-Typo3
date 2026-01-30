@@ -1,0 +1,20 @@
+{
+  "name": "overviewwebsite/overview",
+  "description": "Promotion Events Extension",
+  "type": "typo3-cms-extension",
+  "version": "2.0.0",
+  "license": "GPL-2.0-or-later",
+  "require": {
+    "typo3/cms-core": "^12.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "OverviewWebsite\\Overview\\": "Classes/"
+    }
+  },
+  "extra": {
+    "typo3/cms": {
+      "extension-key": "overview"
+    }
+  }
+}

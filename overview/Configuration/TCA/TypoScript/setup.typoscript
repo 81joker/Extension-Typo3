@@ -1,0 +1,8 @@
+plugin.tx_overview_overview {
+    view {
+        templateRootPaths.0 = EXT:overview/Resources/Private/Templates/
+        partialRootPaths.0 = EXT:overview/Resources/Private/Partials/
+        layoutRootPaths.0 = EXT:overview/Resources/Private/Layouts/
+    }
+    
+}

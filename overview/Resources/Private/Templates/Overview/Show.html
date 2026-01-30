@@ -1,0 +1,85 @@
+<f:for each="{abouts}" as="about">
+  <section class="about-section section-padding" id="section_2">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-12 text-center">
+          <h2 class="mb-lg-5 mb-4">Should Hier Main Titlt Optional</h2>
+        </div>
+
+        <div class="col-lg-5 col-12 me-auto mb-4 mb-lg-0">
+          <h3 class="mb-3">{about.title}</h3>
+
+          <!-- <div class="about-text"> -->
+          <f:format.html>{about.description}</f:format.html>
+          <!-- </div> -->
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0 mb-md-0">
+          <div class="member-block">
+            <div class="member-block-image-wrap">
+              <f:image
+                image="{about.firstimage}"
+                class="member-block-image img-fluid"
+                maxHeight="400"
+              />
+              <ul class="social-icon">
+                <li class="social-icon-item">
+                  <a
+                    href="{about.firsttwitterurl}"
+                    class="social-icon-link bi-twitter"
+                  ></a>
+                </li>
+
+                <li class="social-icon-item">
+                  <a
+                    href="{about.firstfacebookurl}"
+                    class="social-icon-link bi-whatsapp"
+                  ></a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="member-block-info d-flex align-items-center">
+              <h4>{about.firstheade}</h4>
+              <p class="ms-auto">{about.firstsubhead}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-12">
+          <div class="member-block">
+            <div class="member-block-image-wrap">
+              <f:if condition="{about.secondimage}">
+                <f:image
+                  image="{about.secondimage}"
+                  class="member-block-image img-fluid"
+                  maxHeight="400"
+                />
+              </f:if>
+
+              <ul class="social-icon">
+                <li class="social-icon-item">
+                  <a
+                    href="{about.secondfacebookurl}"
+                    class="social-icon-link bi-linkedin"
+                  ></a>
+                </li>
+                <li class="social-icon-item">
+                  <a
+                    href="{about.secondfacebookurl}"
+                    class="social-icon-link bi-twitter"
+                  ></a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="member-block-info d-flex align-items-center">
+              <h4>{about.secondheade}</h4>
+              <p class="ms-auto">{about.secondsubhead}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</f:for>
