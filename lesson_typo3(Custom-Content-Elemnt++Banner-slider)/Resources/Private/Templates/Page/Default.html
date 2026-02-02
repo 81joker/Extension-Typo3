@@ -1,0 +1,33 @@
+<f:layout name="Default" />
+<f:section name="Main">
+    <f:asset.css identifier="background_01">
+        @font-face { font-family: 'Bootstrap Icons'; src:
+        url('EXT:lesson_typo3/Resources/Public/Css/Main/bootstrap-icons.woff')
+        format('woff'); font-weight: normal; font-style: normal; }
+    </f:asset.css>
+    <main>
+        <f:layout name="Default" />
+        <f:section name="Main">
+            <main>
+                <f:render partial="Header" />
+            </main>
+
+            <f:comment>
+                <f:render section="Footer" />
+            </f:comment>
+            <section class="bg-light" style="padding-top: 8rem">
+                <f:cObject
+                    typoscriptObjectPath="lib.dynamicContent"
+                    data="{colPos: '0'}"
+                />
+            </section>
+        </f:section>
+    </main>
+
+    <f:comment>
+        <main>
+            <f:render partial="MainContent" />
+        </main>
+    </f:comment>
+    <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '0'}" />
+</f:section>

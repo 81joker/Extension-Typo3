@@ -1,0 +1,19 @@
+<div class="swiper banner-slider">
+    <div class="swiper-wrapper">
+        <f:for each="{slides}" as="slide">
+            <div class="swiper-slide">
+                <f:image
+                    image="{slide}"
+                    treatIdAsReference="1"
+                    class="img-fluid"
+                    width="840"
+                    height="341"
+                />
+            </div>
+        </f:for>
+    </div>
+
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</div>

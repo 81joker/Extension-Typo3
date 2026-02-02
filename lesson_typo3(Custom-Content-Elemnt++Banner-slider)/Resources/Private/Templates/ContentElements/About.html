@@ -1,0 +1,62 @@
+<section class="about-section section-padding" id="section_2">
+    <div class="container">
+        <div class="row">
+            <f:for each="{data.gallery}" as="image">
+                <f:image image="{image}" width="300c" />
+            </f:for>
+
+            <!-- Main title -->
+            <div class="col-lg-12 col-12 text-center">
+                <h2 class="mb-lg-5 mb-4">{data.header}</h2>
+            </div>
+
+            <!-- Text content -->
+            <div class="col-lg-5 col-12 me-auto mb-4 mb-lg-0">
+                <h3 class="mb-3">{data.subheader}</h3>
+                <f:format.html>{data.bodytext}</f:format.html>
+            </div>
+
+            <!-- Team members -->
+            <f:for each="{team}" as="member">
+                <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
+                    <div class="member-block">
+                        <div class="member-block-image-wrap">
+                            <f:image
+                                image="{member.image.0}"
+                                class="member-block-image img-fluid"
+                                alt="{member.name}"
+                            />
+
+                            <ul class="social-icon">
+                                <f:if condition="{member.twitter}">
+                                    <li class="social-icon-item">
+                                        <a
+                                            href="{member.twitter}"
+                                            class="social-icon-link bi-twitter"
+                                        ></a>
+                                    </li>
+                                </f:if>
+
+                                <f:if condition="{member.linkedin}">
+                                    <li class="social-icon-item">
+                                        <a
+                                            href="{member.linkedin}"
+                                            class="social-icon-link bi-linkedin"
+                                        ></a>
+                                    </li>
+                                </f:if>
+                            </ul>
+                        </div>
+
+                        <div
+                            class="member-block-info d-flex align-items-center"
+                        >
+                            <h4>{member.name}</h4>
+                            <p class="ms-auto">{member.position}</p>
+                        </div>
+                    </div>
+                </div>
+            </f:for>
+        </div>
+    </div>
+</section>
